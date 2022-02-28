@@ -1,6 +1,9 @@
 name: 'OLEG 🎲 ATM'
 on:
-  repository_dispatch:
+  workflow_dispatch:
+  issue_comment:
+    types:
+      - created
 jobs:
   build:
     runs-on: ubuntu-latest
