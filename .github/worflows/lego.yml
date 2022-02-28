@@ -1,0 +1,18 @@
+name: 'OLEG 🎲 ATM'
+on:
+  repository_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+      - name: Run the script
+        run: |
+          pip install requests python-telegram-bot
+          python run.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
