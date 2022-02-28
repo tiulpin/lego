@@ -98,8 +98,8 @@ def main():
                         )
                         send_post(
                             message,
-                            point["latitude"],
-                            point["longitude"],
+                            point["location"]["lat"],
+                            point["location"]["lng"],
                         )
     except Exception as e:
         print(e)
