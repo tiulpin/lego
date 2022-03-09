@@ -93,7 +93,7 @@ def main():
                         elif limit["currency"] == "EUR":
                             eur_limit = limit["amount"]
                     if usd_limit >= OK_LIMIT or eur_limit >= OK_LIMIT:
-                        message = "📍{}\n💵 **USD**: {}\n💶 **EUR**: {}".format(
+                        message = "📍{}\n💵 **USD**: {}".format(
                             point["address"], usd_limit, eur_limit
                         )
                         send_post(
